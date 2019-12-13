@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+B#!/usr/bin/python3
 def magic_calculation(a, b):
     from magic_calculation_102 import add, sub
     if a < b:
@@ -7,6 +7,4 @@ def magic_calculation(a, b):
             c = add(c, i)
             return c
     else:
-            return sub(a, b)
-from dis import dis
-dis(magic_calculation)
+        return sub(a, b)
