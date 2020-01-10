@@ -26,17 +26,14 @@ class Square():
         if self.__size == 0:
             print()
             return
-        if self.__size > 0:
-            for count1 in range(self.__position[1]):
-                print()
-            for count2 in range(self.__size):
-                for count3 in range(self.__position[0]):
-                    print(" ", end='')
-                for count4 in range(self.__size):
-                    print("#", end='')
-                print()
-        else:
+        for count1 in range(self.__position[1]):
             print()
+        for count2 in range(self.__size):
+            for count3 in range(self.__position[0]):
+                print(" ", end='')
+            for count4 in range(self.__size):
+                print("#", end='')
+        print()
 
     @property
     def position(self):
