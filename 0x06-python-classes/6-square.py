@@ -44,7 +44,7 @@ class Square():
     def position(self, value):
         """setter value size"""
         poserr = "position must be a tuple of 2 positive integers"
-        if len(value) == 2:
+        if type(value) == tuple:
             if isinstance(value[0], int) and isinstance(value[1], int):
                 if value[0] >= 0 and value[1] >= 0:
                     self.__position = (value[0], value[1])
@@ -57,5 +57,5 @@ class Square():
 
     def __init__(self, size=0, position=(0, 0)):
         """initializtion"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
