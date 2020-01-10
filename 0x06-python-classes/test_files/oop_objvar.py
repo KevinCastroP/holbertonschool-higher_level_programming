@@ -2,7 +2,7 @@
 class Robot:
     """Represents a robot, with a name."""
 
-    #a class variable, counting the number of robots
+    #A class variable, counting the number of robots
     population = 0
 
     def __init__(self, name):
