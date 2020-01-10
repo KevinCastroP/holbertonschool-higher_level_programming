@@ -34,6 +34,7 @@ class Square():
                 print()
         else:
             print()
+
     @property
     def position(self):
         """print the tuple position"""
