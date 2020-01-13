@@ -1,8 +1,14 @@
 #!/usr/bin/python3
-
+"""
+matrix_divided - divide a matrix for a number
+matrix: matrix to divide
+div: integer to divide the matrix
+"""
 
 def matrix_divided(matrix, div):
-    """Divide a matrix"""
+    """
+    Divide matrix method
+    """
     error1 = "matrix must be a matrix (list of lists) of integers/floats"
     error1 = "Each row of the matrix must have the same size"
     if not (isinstance(matrix, list)):
