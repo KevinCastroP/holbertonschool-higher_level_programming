@@ -1,0 +1,37 @@
+The ``text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+Import:
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Now use it:
+
+
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(["test", "test"])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation({id:"text", id:"text"})
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(("text", "text"))
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
