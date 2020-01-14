@@ -2,6 +2,7 @@
 """
 print_square - prints a square with #
 size: size of the square
+
 """
 
 def print_square(size):

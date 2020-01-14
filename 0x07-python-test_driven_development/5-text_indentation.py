@@ -2,6 +2,7 @@
 """
 text_indentation - printing a text divide for ".""?"
 text: string to print
+
 """
 def text_indentation(text):
     """
