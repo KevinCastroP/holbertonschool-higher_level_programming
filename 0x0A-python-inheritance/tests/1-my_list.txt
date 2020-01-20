@@ -1,4 +1,4 @@
-The ``1-my_list`` module
+BThe ``1-my_list`` module
 ======================
 
 Using ``1-my_list``
@@ -6,13 +6,43 @@ Using ``1-my_list``
 
 Import:
 
->>> my_list = __import__("1-my_list").MyList
+>>> MyList = __import__("1-my_list").MyList
 
 Now use it:
 
->>> 
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(2)
+>>> my_list.append(6)
+>>> print(my_list)
+[3, 2, 6]
 
+>>> my_list.print_sorted()
+[2, 3, 6]
 
->>> add_integer("hi", 3)
-Traceback (most recent call last):
-TypeError: a must be an integer
+>>> my_list = MyList()
+>>> my_list.append("hola pepe")
+>>> print(my_list)
+['hola pepe']
+
+>>> my_list.print_sorted()
+['hola pepe']
+
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(-2)
+>>> my_list.append(-5)
+>>> my_list.append(-3)
+>>> print(my_list)
+[-1, -2, -5, -3]
+
+>>> my_list.print_sorted()
+[-5, -3, -2, -1]
+
+>>> my_list = MyList()
+>>> my_list.append(10)
+>>> print(my_list)
+[10]
+
+>>> my_list.print_sorted()
+[10]
