@@ -10,6 +10,4 @@ from the specified class
 def inherits_from(obj, a_class):
     """verify sub class"""
 
-    if issubclass(type(obj), a_class) and type(obj) != a_class:
-        return True
-    return False
+    return type(obj) != a_class and isinstance(obj, a_class)
