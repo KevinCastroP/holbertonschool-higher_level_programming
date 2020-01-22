@@ -11,9 +11,9 @@ def inherits_from(obj, a_class):
     """verify sub class"""
 
     for base in obj.__class__.__bases__:
-        if type(obj) == str(a_class):
+        if str(base) == str(a_class):
             return True
         for bas in base.__class__.__bases__:
-            if type(obj) == str(a_class):
+            if str(bas) == str(a_class):
                 return True
     return False
