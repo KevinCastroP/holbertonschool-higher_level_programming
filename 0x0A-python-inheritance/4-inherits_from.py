@@ -8,12 +8,5 @@ from the specified class
 
 
 def inherits_from(obj, a_class):
-    """verify sub class"""
-
-    for base in obj.__class__.__bases__:
-        if str(base) == str(a_class):
-            return True
-        for bas in base.__class__.__bases__:
-            if str(bas) == str(a_class):
-                return True
-    return False
+    """Evaluates if an object is a sub class instance of a_class"""
+    return issubclass(type(obj), a_class) and type(obj) != a_class
