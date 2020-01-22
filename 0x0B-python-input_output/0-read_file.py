@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """
-    Read file
-    function to read a text file
-    and printed
+Read file
+function to read a text file
+and printed
 """
-
 
 def read_file(filename=""):
     """method to read a file text"""
