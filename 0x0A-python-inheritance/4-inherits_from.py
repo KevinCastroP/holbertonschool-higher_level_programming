@@ -10,7 +10,10 @@ from the specified class
 def inherits_from(obj, a_class):
     """verify sub class"""
 
-    if isinstance(obj, a_class) and not type(obj) == a_class:
-        return True
-    else:
-        return False
+    for base in obj.__class__.__bases__:
+        if type(obj) == str(a_class):
+            return True
+        for bas in base.__class__.__bases__:
+            if type(obj) == str(a_class):
+                return True
+    return False
