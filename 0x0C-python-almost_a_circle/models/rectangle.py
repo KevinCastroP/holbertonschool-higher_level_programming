@@ -120,3 +120,11 @@ class Rectangle(Base):
                 self.x = kwargs["x"]
             if "y" in kwargs:
                 self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        """adding the method dictionary"""
+        idd = self.id
+        x = super().x
+        y = super().y
+        w = super().width
+        return {'x': x, 'y': y, 'id': idd, 'size': w}
