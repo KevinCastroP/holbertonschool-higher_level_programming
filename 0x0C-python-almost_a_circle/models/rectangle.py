@@ -95,7 +95,7 @@ class Rectangle(Base):
         h = self.__height
         return "[Rectangle] ({}) {}/{} - {}/{}".format(my_id, x, y, w, h)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
         if len(args) > 0:
             for num, arg in enumerate(args):
