@@ -122,8 +122,10 @@ class Rectangle(Base):
                 self.y = kwargs["y"]
 
     def to_dictionary(self):
-        """adding the method dictionary"""
-        dic = self.__dict__
-        attributes = ["id", "width", "height", "x","y"]
-        r = {x: getattr(self, x) for x in attributes}
-        return r
+        """Returns the dictionary representation of a Rectangle"""
+        idd = self.id
+        x = self.__x
+        y = self.__y
+        w = self.__width
+        h = self.__height
+        return {'x': x, 'y': y, 'id': idd, 'height': h, 'width': w}
