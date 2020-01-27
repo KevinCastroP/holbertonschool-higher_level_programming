@@ -31,3 +31,27 @@ class Square(Rectangle):
         """size setter"""
         super(Square, type(self)).width.fset(self, size)
         super(Square, type(self)).height.fset(self, size)
+
+    def update(self, *args, **kwargs):
+        """assigns attributes to square class"""
+        if len(args) > 0:
+            for num, arg in enumerate(args):
+                if num == 0:
+                    self.id = arg
+                elif num == 1:
+                    super(Square, type(self)).width.fset(self, arg)
+                    super(Square, type(self)).height.fset(self, arg)
+                elif num == 2:
+                    super(Square, type(self)).x.fset(self, arg)
+                elif num == 3:
+                    super(Square, type(self)).y.fset(self, arg)
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                super(Square, type(self)).width.fset(self, kwargs["size"])
+                super(Square, type(self)).height.fset(self, kwargs["size"])
+            if "x" in kwargs:
+                super(Square, type(self)).x.fset(self, kwargs["x"])
+            if "y" in kwargs:
+                super(Square, type(self)).y.fset(self, kwargs["y"])
