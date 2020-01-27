@@ -123,8 +123,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """adding the method dictionary"""
-        idd = self.id
-        x = super().x
-        y = super().y
-        w = super().width
-        return {'x': x, 'y': y, 'id': idd, 'size': w}
+        dic = self.__dict__
+        attributes = ["id", "width", "height", "x","y"]
+        r = {x: getattr(self, x) for x in attributes}
+        return r
