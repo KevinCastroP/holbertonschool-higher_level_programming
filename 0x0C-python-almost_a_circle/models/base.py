@@ -44,3 +44,13 @@ class Base:
         if json_string is not None:
             lis = json.loads(json_string)
         return lis
+
+    @classmethod
+    def create(cls, **dictionary):
+        """create function"""
+        if cls.__name__ == "Rectangle":
+            new = cls(1, 1)
+        elif cls.__name__ == "Square":
+            new = cls(1)
+        new.update(**dictionary)
+        return new
