@@ -58,7 +58,8 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """adding dictionary to the square class"""
-        dic = self.__dict__
-        attributes = ["id", "size", "x", "y"]
-        rot = {x: getattr(self, x) for x in attributes }
-        return rot
+        my_id = self.id
+        x = super().x
+        y = super().y
+        w = super().width
+        return {'x': x, 'y': y, 'id': my_id, 'size': w}
