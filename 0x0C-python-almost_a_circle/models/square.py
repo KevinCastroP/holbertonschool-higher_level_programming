@@ -57,8 +57,8 @@ class Square(Rectangle):
                 super(Square, type(self)).y.fset(self, kwargs["y"])
 
     def to_dictionary(self):
-        """ar adding dictionary to the square class"""
+        """adding dictionary to the square class"""
         dic = self.__dict__
         attributes = ["id", "size", "x", "y"]
         rot = {x: getattr(self, x) for x in attributes }
-        return rot
+        return (rot)
