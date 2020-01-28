@@ -61,4 +61,4 @@ class Square(Rectangle):
         dic = self.__dict__
         attributes = ["id", "size", "x", "y"]
         rot = {x: getattr(self, x) for x in attributes }
-        return (rot)
+        return rot
