@@ -54,3 +54,20 @@ class Base:
             new = cls(1)
         new.update(**dictionary)
         return new
+
+    @classmethod
+    def load_from_file(cls):
+        """load a pyhton object list from json file"""
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as file:
+                objs = cls.from_json_string(file.read())
+                instances = []
+                for obj in objs:
+                    print(type(obj))
+                    inst = cls.create(**obj)
+                    instances.append(inst)
+                return instances
+        except Exception as e:
+            print(type(e).__name__, e)
+            return []
