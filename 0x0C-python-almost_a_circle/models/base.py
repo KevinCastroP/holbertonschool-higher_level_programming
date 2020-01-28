@@ -57,17 +57,20 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """load a pyhton object list from json file"""
-        filename = cls.__name__ + ".json"
+        """Return a list of instances"""
         try:
-            with open(filename, "r") as file:
-                objs = cls.from_json_string(file.read())
-                instances = []
-                for obj in objs:
-                    print(type(obj))
-                    inst = cls.create(**obj)
-                    instances.append(inst)
-                return instances
-        except Exception as e:
-            print(type(e).__name__, e)
+            f = open(str(cls.__name__) + ".json")
+            f.close()
+        except:
             return []
+
+        l = []
+        with open(str(cls.__name__) + ".json", "r") as f:
+            l = cls.from_json_string(f.read())
+
+        num_ins = len(l)
+        inst = []
+        for y in range(num_ins):
+            inst.append(cls.create(**l[y]))
+
+        return inst
