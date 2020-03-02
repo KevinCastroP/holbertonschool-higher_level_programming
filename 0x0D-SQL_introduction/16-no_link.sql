@@ -1,4 +1,4 @@
 -- Listing all records of the table
-SELECT score, name ORDER BY score DESC
+SELECT score, name
 FROM second_table
-WHERE name != NULL;
+WHERE name != NULL ORDER BY score DESC;
