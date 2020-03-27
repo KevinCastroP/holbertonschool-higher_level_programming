@@ -1,6 +1,6 @@
 # Python Object relational mapping (ORM)
 
-## Before you start please make sure your MySQL server is in 5.7 version
+Before you start please make sure your MySQL server is in 5.7 version
 
 ### How to install MySQL 5.7
 
