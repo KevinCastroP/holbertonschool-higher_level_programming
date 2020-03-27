@@ -4,16 +4,16 @@
 
 ### How to install MySQL 5.7
 
-$ sudo apt-get update
-$ sudo apt-get install mysql-server-5.7
+<p> $ sudo apt-get update </p>
+<p> $ sudo apt-get install mysql-server-5.7 </p>
 
 ### How to connect to your MySQL server:
 
-$ mysql -hlocalhost -uroot -p
-Password: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 42
-Server version: 5.7.8-rc MySQL Community Server (GPL)
+<p> $ mysql -hlocalhost -uroot -p </p>
+<p> Password: </p>
+<p> Welcome to the MySQL monitor.  Commands end with ; or \g. </p>
+<p> Your MySQL connection id is 42 </p>
+<p> Server version: 5.7.8-rc MySQL Community Server (GPL) </p>
 
 Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
 
@@ -38,20 +38,20 @@ The biggest difference is: no more SQL queries! Indeed, the purpose of an ORM is
 
 ### Install MySQLdb module version 1.3.x
 
-$ sudo apt-get install libmysqlclient-dev
-$ sudo apt-get install zlib1g-dev
-$ sudo pip3 install mysqlclient==1.3.10
-...
-$ python3
->>> import MySQLdb
->>> MySQLdb.__version__ 
-'1.3.10'
+<p> $ sudo apt-get install libmysqlclient-dev </p>
+<p> $ sudo apt-get install zlib1g-dev </p>
+<p> $ sudo pip3 install mysqlclient==1.3.10 </p>
+<p>...</p>
+<p>$ python3</p>
+<p>>>> import MySQLdb</p>
+<p>>>> MySQLdb.__version__</p>
+<p>'1.3.10'</p>
 
 ### Install SQLAlchemy module version 1.2.x
 
-$ pip3 install SQLAlchemy==1.2.5
-...
-$ python3
->>> import sqlalchemy
->>> sqlalchemy.__version__ 
-'1.2.5'
+<p>$ pip3 install SQLAlchemy==1.2.5</p>
+<p>...</p>
+<p>$ python3</p>
+<p>>>> import sqlalchemy</p>
+<p>>>> sqlalchemy.__version__ </p>
+<p>'1.2.5'</p>
