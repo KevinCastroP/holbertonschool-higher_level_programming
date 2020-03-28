@@ -14,7 +14,6 @@ if __name__ == "__main__":
     pwd = argv[2]
     db_name = argv[3]
 
-
     """Connecting with MySQL server"""
     db = MySQLdb.connect(host="localhost", port=3306, user=usr,
                          passwd=pwd, db=db_name,
