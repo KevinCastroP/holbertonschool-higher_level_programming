@@ -23,7 +23,7 @@ if __name__ == "__main__":
                          charset="utf8")
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE %s",(conc,))
+    cur.execute("SELECT * FROM states WHERE name LIKE %s", (conc,))
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
