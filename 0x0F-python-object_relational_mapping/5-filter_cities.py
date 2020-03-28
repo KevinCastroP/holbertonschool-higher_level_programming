@@ -26,7 +26,6 @@ if __name__ == "__main__":
     cur.execute("SELECT cities.name FROM cities JOIN states ON " +
                 "cities.state_id = states.id WHERE states.name LIKE %s",(conc,))
     query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
+    print(", ".join(row[0] for row in query_rows))
     cur.close()
     db.close()

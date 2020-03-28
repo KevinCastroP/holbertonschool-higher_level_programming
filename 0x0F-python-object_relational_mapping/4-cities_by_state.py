@@ -21,8 +21,9 @@ if __name__ == "__main__":
                          charset="utf8")
 
     cur = db.cursor()
-    cur.execute("SELECT cities.id, cities.name, states.name FROM cities " +
-                "JOIN states ON cities.state_id=states.id")
+    cur.execute("SELECT c.id, c.name, s.name " +
+                "FROM cities AS c, states AS s " +
+                "WHERE c.state_id=s.id")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
