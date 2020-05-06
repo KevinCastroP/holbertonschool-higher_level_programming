@@ -1,5 +1,4 @@
 #!/usr/bin/node
-
 /*
   print Found or not if exists input arguments
 */
