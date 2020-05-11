@@ -19,9 +19,9 @@ class Rectangle {
   }
 
   rotate () {
-    for (let width = 0; width < this.width; width++) {
-      console.log('X'.repeat(this.height));
-    }
+    const count = this.height;
+    this.height = this.width;
+    this.width = count;
   }
 
   double () {
